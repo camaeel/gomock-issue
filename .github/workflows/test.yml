@@ -1,14 +1,12 @@
 on:
-  workflow_call:
-  # push:  # TODO: remove this
-  #   branches:
-  #     - '*'
+  push:  # TODO: remove this
+    branches:
+      - '*'
 
 name: Test
 jobs:
   test:
-
-    runs-on: ubuntu-22.04 # ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
