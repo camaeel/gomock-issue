@@ -1,0 +1,44 @@
+on:
+  workflow_call:
+  # push:  # TODO: remove this
+  #   branches:
+  #     - '*'
+
+name: Test
+jobs:
+  test:
+
+    runs-on: ubuntu-22.04 # ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: './go.mod'
+          cache: false
+        id: go
+
+
+      - name: Go mod download
+        run: go mod download -x
+
+      - name: Test
+        run: |
+          # go get github.com/playwright-community/playwright-go/cmd/playwright@`grep -oE "playwright-go v\S+" go.mod | sed 's/playwright-go //g'`
+          # go install github.com/playwright-community/playwright-go/cmd/playwright@`grep -oE "playwright-go v\S+" go.mod | sed 's/playwright-go //g'`
+          # playwright install --with-deps chromium
+          go get go.uber.org/mock/mockgen
+          go install go.uber.org/mock/mockgen
+          echo "DEBUG: installed"
+          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks github.com/playwright-community/playwright-go Page
+          echo "DEBUG: generated"
+          git diff
+          echo "DIFFED"
+          mockgen --version
+          playwright -V
+
+          echo "debuggign parser"
+          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks -debug_parser github.com/playwright-community/playwright-go Page
+          echo "debugged parser"
