@@ -12,7 +12,7 @@ package mocks
 import (
 	reflect "reflect"
 
-	playwright_go "github.com/playwright-community/playwright-go"
+	playwright "github.com/playwright-community/playwright-go"
 	gomock "go.uber.org/mock/gomock"
 )
 
@@ -41,7 +41,7 @@ func (m *MockPage) EXPECT() *MockPageMockRecorder {
 }
 
 // AddInitScript mocks base method.
-func (m *MockPage) AddInitScript(script playwright_go.Script) error {
+func (m *MockPage) AddInitScript(script playwright.Script) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddInitScript", script)
 	ret0, _ := ret[0].(error)
@@ -55,7 +55,7 @@ func (mr *MockPageMockRecorder) AddInitScript(script any) *gomock.Call {
 }
 
 // AddLocatorHandler mocks base method.
-func (m *MockPage) AddLocatorHandler(locator playwright_go.Locator, handler func(playwright_go.Locator), options ...playwright_go.PageAddLocatorHandlerOptions) error {
+func (m *MockPage) AddLocatorHandler(locator playwright.Locator, handler func(playwright.Locator), options ...playwright.PageAddLocatorHandlerOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{locator, handler}
 	for _, a := range options {
@@ -74,10 +74,10 @@ func (mr *MockPageMockRecorder) AddLocatorHandler(locator, handler any, options 
 }
 
 // AddScriptTag mocks base method.
-func (m *MockPage) AddScriptTag(options playwright_go.PageAddScriptTagOptions) (playwright_go.ElementHandle, error) {
+func (m *MockPage) AddScriptTag(options playwright.PageAddScriptTagOptions) (playwright.ElementHandle, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddScriptTag", options)
-	ret0, _ := ret[0].(playwright_go.ElementHandle)
+	ret0, _ := ret[0].(playwright.ElementHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -89,10 +89,10 @@ func (mr *MockPageMockRecorder) AddScriptTag(options any) *gomock.Call {
 }
 
 // AddStyleTag mocks base method.
-func (m *MockPage) AddStyleTag(options playwright_go.PageAddStyleTagOptions) (playwright_go.ElementHandle, error) {
+func (m *MockPage) AddStyleTag(options playwright.PageAddStyleTagOptions) (playwright.ElementHandle, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddStyleTag", options)
-	ret0, _ := ret[0].(playwright_go.ElementHandle)
+	ret0, _ := ret[0].(playwright.ElementHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -118,7 +118,7 @@ func (mr *MockPageMockRecorder) BringToFront() *gomock.Call {
 }
 
 // Check mocks base method.
-func (m *MockPage) Check(selector string, options ...playwright_go.PageCheckOptions) error {
+func (m *MockPage) Check(selector string, options ...playwright.PageCheckOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -137,7 +137,7 @@ func (mr *MockPageMockRecorder) Check(selector any, options ...any) *gomock.Call
 }
 
 // Click mocks base method.
-func (m *MockPage) Click(selector string, options ...playwright_go.PageClickOptions) error {
+func (m *MockPage) Click(selector string, options ...playwright.PageClickOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -156,10 +156,10 @@ func (mr *MockPageMockRecorder) Click(selector any, options ...any) *gomock.Call
 }
 
 // Clock mocks base method.
-func (m *MockPage) Clock() playwright_go.Clock {
+func (m *MockPage) Clock() playwright.Clock {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Clock")
-	ret0, _ := ret[0].(playwright_go.Clock)
+	ret0, _ := ret[0].(playwright.Clock)
 	return ret0
 }
 
@@ -170,7 +170,7 @@ func (mr *MockPageMockRecorder) Clock() *gomock.Call {
 }
 
 // Close mocks base method.
-func (m *MockPage) Close(options ...playwright_go.PageCloseOptions) error {
+func (m *MockPage) Close(options ...playwright.PageCloseOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -203,10 +203,10 @@ func (mr *MockPageMockRecorder) Content() *gomock.Call {
 }
 
 // Context mocks base method.
-func (m *MockPage) Context() playwright_go.BrowserContext {
+func (m *MockPage) Context() playwright.BrowserContext {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Context")
-	ret0, _ := ret[0].(playwright_go.BrowserContext)
+	ret0, _ := ret[0].(playwright.BrowserContext)
 	return ret0
 }
 
@@ -217,7 +217,7 @@ func (mr *MockPageMockRecorder) Context() *gomock.Call {
 }
 
 // Dblclick mocks base method.
-func (m *MockPage) Dblclick(selector string, options ...playwright_go.PageDblclickOptions) error {
+func (m *MockPage) Dblclick(selector string, options ...playwright.PageDblclickOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -236,7 +236,7 @@ func (mr *MockPageMockRecorder) Dblclick(selector any, options ...any) *gomock.C
 }
 
 // DispatchEvent mocks base method.
-func (m *MockPage) DispatchEvent(selector, typ string, eventInit any, options ...playwright_go.PageDispatchEventOptions) error {
+func (m *MockPage) DispatchEvent(selector, typ string, eventInit any, options ...playwright.PageDispatchEventOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, typ, eventInit}
 	for _, a := range options {
@@ -255,7 +255,7 @@ func (mr *MockPageMockRecorder) DispatchEvent(selector, typ, eventInit any, opti
 }
 
 // DragAndDrop mocks base method.
-func (m *MockPage) DragAndDrop(source, target string, options ...playwright_go.PageDragAndDropOptions) error {
+func (m *MockPage) DragAndDrop(source, target string, options ...playwright.PageDragAndDropOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{source, target}
 	for _, a := range options {
@@ -293,7 +293,7 @@ func (mr *MockPageMockRecorder) Emit(name any, payload ...any) *gomock.Call {
 }
 
 // EmulateMedia mocks base method.
-func (m *MockPage) EmulateMedia(options ...playwright_go.PageEmulateMediaOptions) error {
+func (m *MockPage) EmulateMedia(options ...playwright.PageEmulateMediaOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -311,7 +311,7 @@ func (mr *MockPageMockRecorder) EmulateMedia(options ...any) *gomock.Call {
 }
 
 // EvalOnSelector mocks base method.
-func (m *MockPage) EvalOnSelector(selector, expression string, arg any, options ...playwright_go.PageEvalOnSelectorOptions) (any, error) {
+func (m *MockPage) EvalOnSelector(selector, expression string, arg any, options ...playwright.PageEvalOnSelectorOptions) (any, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, expression, arg}
 	for _, a := range options {
@@ -371,14 +371,14 @@ func (mr *MockPageMockRecorder) Evaluate(expression any, arg ...any) *gomock.Cal
 }
 
 // EvaluateHandle mocks base method.
-func (m *MockPage) EvaluateHandle(expression string, arg ...any) (playwright_go.JSHandle, error) {
+func (m *MockPage) EvaluateHandle(expression string, arg ...any) (playwright.JSHandle, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{expression}
 	for _, a := range arg {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "EvaluateHandle", varargs...)
-	ret0, _ := ret[0].(playwright_go.JSHandle)
+	ret0, _ := ret[0].(playwright.JSHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -391,14 +391,14 @@ func (mr *MockPageMockRecorder) EvaluateHandle(expression any, arg ...any) *gomo
 }
 
 // ExpectConsoleMessage mocks base method.
-func (m *MockPage) ExpectConsoleMessage(cb func() error, options ...playwright_go.PageExpectConsoleMessageOptions) (playwright_go.ConsoleMessage, error) {
+func (m *MockPage) ExpectConsoleMessage(cb func() error, options ...playwright.PageExpectConsoleMessageOptions) (playwright.ConsoleMessage, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectConsoleMessage", varargs...)
-	ret0, _ := ret[0].(playwright_go.ConsoleMessage)
+	ret0, _ := ret[0].(playwright.ConsoleMessage)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -411,14 +411,14 @@ func (mr *MockPageMockRecorder) ExpectConsoleMessage(cb any, options ...any) *go
 }
 
 // ExpectDownload mocks base method.
-func (m *MockPage) ExpectDownload(cb func() error, options ...playwright_go.PageExpectDownloadOptions) (playwright_go.Download, error) {
+func (m *MockPage) ExpectDownload(cb func() error, options ...playwright.PageExpectDownloadOptions) (playwright.Download, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectDownload", varargs...)
-	ret0, _ := ret[0].(playwright_go.Download)
+	ret0, _ := ret[0].(playwright.Download)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -431,7 +431,7 @@ func (mr *MockPageMockRecorder) ExpectDownload(cb any, options ...any) *gomock.C
 }
 
 // ExpectEvent mocks base method.
-func (m *MockPage) ExpectEvent(event string, cb func() error, options ...playwright_go.PageExpectEventOptions) (any, error) {
+func (m *MockPage) ExpectEvent(event string, cb func() error, options ...playwright.PageExpectEventOptions) (any, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{event, cb}
 	for _, a := range options {
@@ -451,14 +451,14 @@ func (mr *MockPageMockRecorder) ExpectEvent(event, cb any, options ...any) *gomo
 }
 
 // ExpectFileChooser mocks base method.
-func (m *MockPage) ExpectFileChooser(cb func() error, options ...playwright_go.PageExpectFileChooserOptions) (playwright_go.FileChooser, error) {
+func (m *MockPage) ExpectFileChooser(cb func() error, options ...playwright.PageExpectFileChooserOptions) (playwright.FileChooser, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectFileChooser", varargs...)
-	ret0, _ := ret[0].(playwright_go.FileChooser)
+	ret0, _ := ret[0].(playwright.FileChooser)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -471,14 +471,14 @@ func (mr *MockPageMockRecorder) ExpectFileChooser(cb any, options ...any) *gomoc
 }
 
 // ExpectNavigation mocks base method.
-func (m *MockPage) ExpectNavigation(cb func() error, options ...playwright_go.PageExpectNavigationOptions) (playwright_go.Response, error) {
+func (m *MockPage) ExpectNavigation(cb func() error, options ...playwright.PageExpectNavigationOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectNavigation", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -491,14 +491,14 @@ func (mr *MockPageMockRecorder) ExpectNavigation(cb any, options ...any) *gomock
 }
 
 // ExpectPopup mocks base method.
-func (m *MockPage) ExpectPopup(cb func() error, options ...playwright_go.PageExpectPopupOptions) (playwright_go.Page, error) {
+func (m *MockPage) ExpectPopup(cb func() error, options ...playwright.PageExpectPopupOptions) (playwright.Page, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectPopup", varargs...)
-	ret0, _ := ret[0].(playwright_go.Page)
+	ret0, _ := ret[0].(playwright.Page)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -511,14 +511,14 @@ func (mr *MockPageMockRecorder) ExpectPopup(cb any, options ...any) *gomock.Call
 }
 
 // ExpectRequest mocks base method.
-func (m *MockPage) ExpectRequest(urlOrPredicate any, cb func() error, options ...playwright_go.PageExpectRequestOptions) (playwright_go.Request, error) {
+func (m *MockPage) ExpectRequest(urlOrPredicate any, cb func() error, options ...playwright.PageExpectRequestOptions) (playwright.Request, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{urlOrPredicate, cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectRequest", varargs...)
-	ret0, _ := ret[0].(playwright_go.Request)
+	ret0, _ := ret[0].(playwright.Request)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -531,14 +531,14 @@ func (mr *MockPageMockRecorder) ExpectRequest(urlOrPredicate, cb any, options ..
 }
 
 // ExpectRequestFinished mocks base method.
-func (m *MockPage) ExpectRequestFinished(cb func() error, options ...playwright_go.PageExpectRequestFinishedOptions) (playwright_go.Request, error) {
+func (m *MockPage) ExpectRequestFinished(cb func() error, options ...playwright.PageExpectRequestFinishedOptions) (playwright.Request, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectRequestFinished", varargs...)
-	ret0, _ := ret[0].(playwright_go.Request)
+	ret0, _ := ret[0].(playwright.Request)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -551,14 +551,14 @@ func (mr *MockPageMockRecorder) ExpectRequestFinished(cb any, options ...any) *g
 }
 
 // ExpectResponse mocks base method.
-func (m *MockPage) ExpectResponse(urlOrPredicate any, cb func() error, options ...playwright_go.PageExpectResponseOptions) (playwright_go.Response, error) {
+func (m *MockPage) ExpectResponse(urlOrPredicate any, cb func() error, options ...playwright.PageExpectResponseOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{urlOrPredicate, cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectResponse", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -571,14 +571,14 @@ func (mr *MockPageMockRecorder) ExpectResponse(urlOrPredicate, cb any, options .
 }
 
 // ExpectWebSocket mocks base method.
-func (m *MockPage) ExpectWebSocket(cb func() error, options ...playwright_go.PageExpectWebSocketOptions) (playwright_go.WebSocket, error) {
+func (m *MockPage) ExpectWebSocket(cb func() error, options ...playwright.PageExpectWebSocketOptions) (playwright.WebSocket, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectWebSocket", varargs...)
-	ret0, _ := ret[0].(playwright_go.WebSocket)
+	ret0, _ := ret[0].(playwright.WebSocket)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -591,14 +591,14 @@ func (mr *MockPageMockRecorder) ExpectWebSocket(cb any, options ...any) *gomock.
 }
 
 // ExpectWorker mocks base method.
-func (m *MockPage) ExpectWorker(cb func() error, options ...playwright_go.PageExpectWorkerOptions) (playwright_go.Worker, error) {
+func (m *MockPage) ExpectWorker(cb func() error, options ...playwright.PageExpectWorkerOptions) (playwright.Worker, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{cb}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ExpectWorker", varargs...)
-	ret0, _ := ret[0].(playwright_go.Worker)
+	ret0, _ := ret[0].(playwright.Worker)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -611,7 +611,7 @@ func (mr *MockPageMockRecorder) ExpectWorker(cb any, options ...any) *gomock.Cal
 }
 
 // ExposeBinding mocks base method.
-func (m *MockPage) ExposeBinding(name string, binding playwright_go.BindingCallFunction, handle ...bool) error {
+func (m *MockPage) ExposeBinding(name string, binding playwright.BindingCallFunction, handle ...bool) error {
 	m.ctrl.T.Helper()
 	varargs := []any{name, binding}
 	for _, a := range handle {
@@ -644,7 +644,7 @@ func (mr *MockPageMockRecorder) ExposeFunction(name, binding any) *gomock.Call {
 }
 
 // Fill mocks base method.
-func (m *MockPage) Fill(selector, value string, options ...playwright_go.PageFillOptions) error {
+func (m *MockPage) Fill(selector, value string, options ...playwright.PageFillOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, value}
 	for _, a := range options {
@@ -663,7 +663,7 @@ func (mr *MockPageMockRecorder) Fill(selector, value any, options ...any) *gomoc
 }
 
 // Focus mocks base method.
-func (m *MockPage) Focus(selector string, options ...playwright_go.PageFocusOptions) error {
+func (m *MockPage) Focus(selector string, options ...playwright.PageFocusOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -682,14 +682,14 @@ func (mr *MockPageMockRecorder) Focus(selector any, options ...any) *gomock.Call
 }
 
 // Frame mocks base method.
-func (m *MockPage) Frame(options ...playwright_go.PageFrameOptions) playwright_go.Frame {
+func (m *MockPage) Frame(options ...playwright.PageFrameOptions) playwright.Frame {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Frame", varargs...)
-	ret0, _ := ret[0].(playwright_go.Frame)
+	ret0, _ := ret[0].(playwright.Frame)
 	return ret0
 }
 
@@ -700,10 +700,10 @@ func (mr *MockPageMockRecorder) Frame(options ...any) *gomock.Call {
 }
 
 // FrameLocator mocks base method.
-func (m *MockPage) FrameLocator(selector string) playwright_go.FrameLocator {
+func (m *MockPage) FrameLocator(selector string) playwright.FrameLocator {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FrameLocator", selector)
-	ret0, _ := ret[0].(playwright_go.FrameLocator)
+	ret0, _ := ret[0].(playwright.FrameLocator)
 	return ret0
 }
 
@@ -714,10 +714,10 @@ func (mr *MockPageMockRecorder) FrameLocator(selector any) *gomock.Call {
 }
 
 // Frames mocks base method.
-func (m *MockPage) Frames() []playwright_go.Frame {
+func (m *MockPage) Frames() []playwright.Frame {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Frames")
-	ret0, _ := ret[0].([]playwright_go.Frame)
+	ret0, _ := ret[0].([]playwright.Frame)
 	return ret0
 }
 
@@ -728,7 +728,7 @@ func (mr *MockPageMockRecorder) Frames() *gomock.Call {
 }
 
 // GetAttribute mocks base method.
-func (m *MockPage) GetAttribute(selector, name string, options ...playwright_go.PageGetAttributeOptions) (string, error) {
+func (m *MockPage) GetAttribute(selector, name string, options ...playwright.PageGetAttributeOptions) (string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, name}
 	for _, a := range options {
@@ -748,14 +748,14 @@ func (mr *MockPageMockRecorder) GetAttribute(selector, name any, options ...any)
 }
 
 // GetByAltText mocks base method.
-func (m *MockPage) GetByAltText(text any, options ...playwright_go.PageGetByAltTextOptions) playwright_go.Locator {
+func (m *MockPage) GetByAltText(text any, options ...playwright.PageGetByAltTextOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{text}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByAltText", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -767,14 +767,14 @@ func (mr *MockPageMockRecorder) GetByAltText(text any, options ...any) *gomock.C
 }
 
 // GetByLabel mocks base method.
-func (m *MockPage) GetByLabel(text any, options ...playwright_go.PageGetByLabelOptions) playwright_go.Locator {
+func (m *MockPage) GetByLabel(text any, options ...playwright.PageGetByLabelOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{text}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByLabel", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -786,14 +786,14 @@ func (mr *MockPageMockRecorder) GetByLabel(text any, options ...any) *gomock.Cal
 }
 
 // GetByPlaceholder mocks base method.
-func (m *MockPage) GetByPlaceholder(text any, options ...playwright_go.PageGetByPlaceholderOptions) playwright_go.Locator {
+func (m *MockPage) GetByPlaceholder(text any, options ...playwright.PageGetByPlaceholderOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{text}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByPlaceholder", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -805,14 +805,14 @@ func (mr *MockPageMockRecorder) GetByPlaceholder(text any, options ...any) *gomo
 }
 
 // GetByRole mocks base method.
-func (m *MockPage) GetByRole(role playwright_go.AriaRole, options ...playwright_go.PageGetByRoleOptions) playwright_go.Locator {
+func (m *MockPage) GetByRole(role playwright.AriaRole, options ...playwright.PageGetByRoleOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{role}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByRole", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -824,10 +824,10 @@ func (mr *MockPageMockRecorder) GetByRole(role any, options ...any) *gomock.Call
 }
 
 // GetByTestId mocks base method.
-func (m *MockPage) GetByTestId(testId any) playwright_go.Locator {
+func (m *MockPage) GetByTestId(testId any) playwright.Locator {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetByTestId", testId)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -838,14 +838,14 @@ func (mr *MockPageMockRecorder) GetByTestId(testId any) *gomock.Call {
 }
 
 // GetByText mocks base method.
-func (m *MockPage) GetByText(text any, options ...playwright_go.PageGetByTextOptions) playwright_go.Locator {
+func (m *MockPage) GetByText(text any, options ...playwright.PageGetByTextOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{text}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByText", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -857,14 +857,14 @@ func (mr *MockPageMockRecorder) GetByText(text any, options ...any) *gomock.Call
 }
 
 // GetByTitle mocks base method.
-func (m *MockPage) GetByTitle(text any, options ...playwright_go.PageGetByTitleOptions) playwright_go.Locator {
+func (m *MockPage) GetByTitle(text any, options ...playwright.PageGetByTitleOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{text}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetByTitle", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -876,14 +876,14 @@ func (mr *MockPageMockRecorder) GetByTitle(text any, options ...any) *gomock.Cal
 }
 
 // GoBack mocks base method.
-func (m *MockPage) GoBack(options ...playwright_go.PageGoBackOptions) (playwright_go.Response, error) {
+func (m *MockPage) GoBack(options ...playwright.PageGoBackOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GoBack", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -895,14 +895,14 @@ func (mr *MockPageMockRecorder) GoBack(options ...any) *gomock.Call {
 }
 
 // GoForward mocks base method.
-func (m *MockPage) GoForward(options ...playwright_go.PageGoForwardOptions) (playwright_go.Response, error) {
+func (m *MockPage) GoForward(options ...playwright.PageGoForwardOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GoForward", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -914,14 +914,14 @@ func (mr *MockPageMockRecorder) GoForward(options ...any) *gomock.Call {
 }
 
 // Goto mocks base method.
-func (m *MockPage) Goto(url string, options ...playwright_go.PageGotoOptions) (playwright_go.Response, error) {
+func (m *MockPage) Goto(url string, options ...playwright.PageGotoOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{url}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Goto", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -934,7 +934,7 @@ func (mr *MockPageMockRecorder) Goto(url any, options ...any) *gomock.Call {
 }
 
 // Hover mocks base method.
-func (m *MockPage) Hover(selector string, options ...playwright_go.PageHoverOptions) error {
+func (m *MockPage) Hover(selector string, options ...playwright.PageHoverOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -953,7 +953,7 @@ func (mr *MockPageMockRecorder) Hover(selector any, options ...any) *gomock.Call
 }
 
 // InnerHTML mocks base method.
-func (m *MockPage) InnerHTML(selector string, options ...playwright_go.PageInnerHTMLOptions) (string, error) {
+func (m *MockPage) InnerHTML(selector string, options ...playwright.PageInnerHTMLOptions) (string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -973,7 +973,7 @@ func (mr *MockPageMockRecorder) InnerHTML(selector any, options ...any) *gomock.
 }
 
 // InnerText mocks base method.
-func (m *MockPage) InnerText(selector string, options ...playwright_go.PageInnerTextOptions) (string, error) {
+func (m *MockPage) InnerText(selector string, options ...playwright.PageInnerTextOptions) (string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -993,7 +993,7 @@ func (mr *MockPageMockRecorder) InnerText(selector any, options ...any) *gomock.
 }
 
 // InputValue mocks base method.
-func (m *MockPage) InputValue(selector string, options ...playwright_go.PageInputValueOptions) (string, error) {
+func (m *MockPage) InputValue(selector string, options ...playwright.PageInputValueOptions) (string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1013,7 +1013,7 @@ func (mr *MockPageMockRecorder) InputValue(selector any, options ...any) *gomock
 }
 
 // IsChecked mocks base method.
-func (m *MockPage) IsChecked(selector string, options ...playwright_go.PageIsCheckedOptions) (bool, error) {
+func (m *MockPage) IsChecked(selector string, options ...playwright.PageIsCheckedOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1047,7 +1047,7 @@ func (mr *MockPageMockRecorder) IsClosed() *gomock.Call {
 }
 
 // IsDisabled mocks base method.
-func (m *MockPage) IsDisabled(selector string, options ...playwright_go.PageIsDisabledOptions) (bool, error) {
+func (m *MockPage) IsDisabled(selector string, options ...playwright.PageIsDisabledOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1067,7 +1067,7 @@ func (mr *MockPageMockRecorder) IsDisabled(selector any, options ...any) *gomock
 }
 
 // IsEditable mocks base method.
-func (m *MockPage) IsEditable(selector string, options ...playwright_go.PageIsEditableOptions) (bool, error) {
+func (m *MockPage) IsEditable(selector string, options ...playwright.PageIsEditableOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1087,7 +1087,7 @@ func (mr *MockPageMockRecorder) IsEditable(selector any, options ...any) *gomock
 }
 
 // IsEnabled mocks base method.
-func (m *MockPage) IsEnabled(selector string, options ...playwright_go.PageIsEnabledOptions) (bool, error) {
+func (m *MockPage) IsEnabled(selector string, options ...playwright.PageIsEnabledOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1107,7 +1107,7 @@ func (mr *MockPageMockRecorder) IsEnabled(selector any, options ...any) *gomock.
 }
 
 // IsHidden mocks base method.
-func (m *MockPage) IsHidden(selector string, options ...playwright_go.PageIsHiddenOptions) (bool, error) {
+func (m *MockPage) IsHidden(selector string, options ...playwright.PageIsHiddenOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1127,7 +1127,7 @@ func (mr *MockPageMockRecorder) IsHidden(selector any, options ...any) *gomock.C
 }
 
 // IsVisible mocks base method.
-func (m *MockPage) IsVisible(selector string, options ...playwright_go.PageIsVisibleOptions) (bool, error) {
+func (m *MockPage) IsVisible(selector string, options ...playwright.PageIsVisibleOptions) (bool, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1147,10 +1147,10 @@ func (mr *MockPageMockRecorder) IsVisible(selector any, options ...any) *gomock.
 }
 
 // Keyboard mocks base method.
-func (m *MockPage) Keyboard() playwright_go.Keyboard {
+func (m *MockPage) Keyboard() playwright.Keyboard {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Keyboard")
-	ret0, _ := ret[0].(playwright_go.Keyboard)
+	ret0, _ := ret[0].(playwright.Keyboard)
 	return ret0
 }
 
@@ -1175,14 +1175,14 @@ func (mr *MockPageMockRecorder) ListenerCount(name any) *gomock.Call {
 }
 
 // Locator mocks base method.
-func (m *MockPage) Locator(selector string, options ...playwright_go.PageLocatorOptions) playwright_go.Locator {
+func (m *MockPage) Locator(selector string, options ...playwright.PageLocatorOptions) playwright.Locator {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Locator", varargs...)
-	ret0, _ := ret[0].(playwright_go.Locator)
+	ret0, _ := ret[0].(playwright.Locator)
 	return ret0
 }
 
@@ -1194,10 +1194,10 @@ func (mr *MockPageMockRecorder) Locator(selector any, options ...any) *gomock.Ca
 }
 
 // MainFrame mocks base method.
-func (m *MockPage) MainFrame() playwright_go.Frame {
+func (m *MockPage) MainFrame() playwright.Frame {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "MainFrame")
-	ret0, _ := ret[0].(playwright_go.Frame)
+	ret0, _ := ret[0].(playwright.Frame)
 	return ret0
 }
 
@@ -1208,10 +1208,10 @@ func (mr *MockPageMockRecorder) MainFrame() *gomock.Call {
 }
 
 // Mouse mocks base method.
-func (m *MockPage) Mouse() playwright_go.Mouse {
+func (m *MockPage) Mouse() playwright.Mouse {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Mouse")
-	ret0, _ := ret[0].(playwright_go.Mouse)
+	ret0, _ := ret[0].(playwright.Mouse)
 	return ret0
 }
 
@@ -1234,7 +1234,7 @@ func (mr *MockPageMockRecorder) On(name, handler any) *gomock.Call {
 }
 
 // OnClose mocks base method.
-func (m *MockPage) OnClose(fn func(playwright_go.Page)) {
+func (m *MockPage) OnClose(fn func(playwright.Page)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnClose", fn)
 }
@@ -1246,7 +1246,7 @@ func (mr *MockPageMockRecorder) OnClose(fn any) *gomock.Call {
 }
 
 // OnConsole mocks base method.
-func (m *MockPage) OnConsole(fn func(playwright_go.ConsoleMessage)) {
+func (m *MockPage) OnConsole(fn func(playwright.ConsoleMessage)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnConsole", fn)
 }
@@ -1258,7 +1258,7 @@ func (mr *MockPageMockRecorder) OnConsole(fn any) *gomock.Call {
 }
 
 // OnCrash mocks base method.
-func (m *MockPage) OnCrash(fn func(playwright_go.Page)) {
+func (m *MockPage) OnCrash(fn func(playwright.Page)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnCrash", fn)
 }
@@ -1270,7 +1270,7 @@ func (mr *MockPageMockRecorder) OnCrash(fn any) *gomock.Call {
 }
 
 // OnDOMContentLoaded mocks base method.
-func (m *MockPage) OnDOMContentLoaded(fn func(playwright_go.Page)) {
+func (m *MockPage) OnDOMContentLoaded(fn func(playwright.Page)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnDOMContentLoaded", fn)
 }
@@ -1282,7 +1282,7 @@ func (mr *MockPageMockRecorder) OnDOMContentLoaded(fn any) *gomock.Call {
 }
 
 // OnDialog mocks base method.
-func (m *MockPage) OnDialog(fn func(playwright_go.Dialog)) {
+func (m *MockPage) OnDialog(fn func(playwright.Dialog)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnDialog", fn)
 }
@@ -1294,7 +1294,7 @@ func (mr *MockPageMockRecorder) OnDialog(fn any) *gomock.Call {
 }
 
 // OnDownload mocks base method.
-func (m *MockPage) OnDownload(fn func(playwright_go.Download)) {
+func (m *MockPage) OnDownload(fn func(playwright.Download)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnDownload", fn)
 }
@@ -1306,7 +1306,7 @@ func (mr *MockPageMockRecorder) OnDownload(fn any) *gomock.Call {
 }
 
 // OnFileChooser mocks base method.
-func (m *MockPage) OnFileChooser(fn func(playwright_go.FileChooser)) {
+func (m *MockPage) OnFileChooser(fn func(playwright.FileChooser)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnFileChooser", fn)
 }
@@ -1318,7 +1318,7 @@ func (mr *MockPageMockRecorder) OnFileChooser(fn any) *gomock.Call {
 }
 
 // OnFrameAttached mocks base method.
-func (m *MockPage) OnFrameAttached(fn func(playwright_go.Frame)) {
+func (m *MockPage) OnFrameAttached(fn func(playwright.Frame)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnFrameAttached", fn)
 }
@@ -1330,7 +1330,7 @@ func (mr *MockPageMockRecorder) OnFrameAttached(fn any) *gomock.Call {
 }
 
 // OnFrameDetached mocks base method.
-func (m *MockPage) OnFrameDetached(fn func(playwright_go.Frame)) {
+func (m *MockPage) OnFrameDetached(fn func(playwright.Frame)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnFrameDetached", fn)
 }
@@ -1342,7 +1342,7 @@ func (mr *MockPageMockRecorder) OnFrameDetached(fn any) *gomock.Call {
 }
 
 // OnFrameNavigated mocks base method.
-func (m *MockPage) OnFrameNavigated(fn func(playwright_go.Frame)) {
+func (m *MockPage) OnFrameNavigated(fn func(playwright.Frame)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnFrameNavigated", fn)
 }
@@ -1354,7 +1354,7 @@ func (mr *MockPageMockRecorder) OnFrameNavigated(fn any) *gomock.Call {
 }
 
 // OnLoad mocks base method.
-func (m *MockPage) OnLoad(fn func(playwright_go.Page)) {
+func (m *MockPage) OnLoad(fn func(playwright.Page)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnLoad", fn)
 }
@@ -1378,7 +1378,7 @@ func (mr *MockPageMockRecorder) OnPageError(fn any) *gomock.Call {
 }
 
 // OnPopup mocks base method.
-func (m *MockPage) OnPopup(fn func(playwright_go.Page)) {
+func (m *MockPage) OnPopup(fn func(playwright.Page)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnPopup", fn)
 }
@@ -1390,7 +1390,7 @@ func (mr *MockPageMockRecorder) OnPopup(fn any) *gomock.Call {
 }
 
 // OnRequest mocks base method.
-func (m *MockPage) OnRequest(fn func(playwright_go.Request)) {
+func (m *MockPage) OnRequest(fn func(playwright.Request)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnRequest", fn)
 }
@@ -1402,7 +1402,7 @@ func (mr *MockPageMockRecorder) OnRequest(fn any) *gomock.Call {
 }
 
 // OnRequestFailed mocks base method.
-func (m *MockPage) OnRequestFailed(fn func(playwright_go.Request)) {
+func (m *MockPage) OnRequestFailed(fn func(playwright.Request)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnRequestFailed", fn)
 }
@@ -1414,7 +1414,7 @@ func (mr *MockPageMockRecorder) OnRequestFailed(fn any) *gomock.Call {
 }
 
 // OnRequestFinished mocks base method.
-func (m *MockPage) OnRequestFinished(fn func(playwright_go.Request)) {
+func (m *MockPage) OnRequestFinished(fn func(playwright.Request)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnRequestFinished", fn)
 }
@@ -1426,7 +1426,7 @@ func (mr *MockPageMockRecorder) OnRequestFinished(fn any) *gomock.Call {
 }
 
 // OnResponse mocks base method.
-func (m *MockPage) OnResponse(fn func(playwright_go.Response)) {
+func (m *MockPage) OnResponse(fn func(playwright.Response)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnResponse", fn)
 }
@@ -1438,7 +1438,7 @@ func (mr *MockPageMockRecorder) OnResponse(fn any) *gomock.Call {
 }
 
 // OnWebSocket mocks base method.
-func (m *MockPage) OnWebSocket(fn func(playwright_go.WebSocket)) {
+func (m *MockPage) OnWebSocket(fn func(playwright.WebSocket)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnWebSocket", fn)
 }
@@ -1450,7 +1450,7 @@ func (mr *MockPageMockRecorder) OnWebSocket(fn any) *gomock.Call {
 }
 
 // OnWorker mocks base method.
-func (m *MockPage) OnWorker(fn func(playwright_go.Worker)) {
+func (m *MockPage) OnWorker(fn func(playwright.Worker)) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "OnWorker", fn)
 }
@@ -1474,10 +1474,10 @@ func (mr *MockPageMockRecorder) Once(name, handler any) *gomock.Call {
 }
 
 // Opener mocks base method.
-func (m *MockPage) Opener() (playwright_go.Page, error) {
+func (m *MockPage) Opener() (playwright.Page, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Opener")
-	ret0, _ := ret[0].(playwright_go.Page)
+	ret0, _ := ret[0].(playwright.Page)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -1489,7 +1489,7 @@ func (mr *MockPageMockRecorder) Opener() *gomock.Call {
 }
 
 // PDF mocks base method.
-func (m *MockPage) PDF(options ...playwright_go.PagePdfOptions) ([]byte, error) {
+func (m *MockPage) PDF(options ...playwright.PagePdfOptions) ([]byte, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -1522,7 +1522,7 @@ func (mr *MockPageMockRecorder) Pause() *gomock.Call {
 }
 
 // Press mocks base method.
-func (m *MockPage) Press(selector, key string, options ...playwright_go.PagePressOptions) error {
+func (m *MockPage) Press(selector, key string, options ...playwright.PagePressOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, key}
 	for _, a := range options {
@@ -1541,14 +1541,14 @@ func (mr *MockPageMockRecorder) Press(selector, key any, options ...any) *gomock
 }
 
 // QuerySelector mocks base method.
-func (m *MockPage) QuerySelector(selector string, options ...playwright_go.PageQuerySelectorOptions) (playwright_go.ElementHandle, error) {
+func (m *MockPage) QuerySelector(selector string, options ...playwright.PageQuerySelectorOptions) (playwright.ElementHandle, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "QuerySelector", varargs...)
-	ret0, _ := ret[0].(playwright_go.ElementHandle)
+	ret0, _ := ret[0].(playwright.ElementHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -1561,10 +1561,10 @@ func (mr *MockPageMockRecorder) QuerySelector(selector any, options ...any) *gom
 }
 
 // QuerySelectorAll mocks base method.
-func (m *MockPage) QuerySelectorAll(selector string) ([]playwright_go.ElementHandle, error) {
+func (m *MockPage) QuerySelectorAll(selector string) ([]playwright.ElementHandle, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QuerySelectorAll", selector)
-	ret0, _ := ret[0].([]playwright_go.ElementHandle)
+	ret0, _ := ret[0].([]playwright.ElementHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -1576,14 +1576,14 @@ func (mr *MockPageMockRecorder) QuerySelectorAll(selector any) *gomock.Call {
 }
 
 // Reload mocks base method.
-func (m *MockPage) Reload(options ...playwright_go.PageReloadOptions) (playwright_go.Response, error) {
+func (m *MockPage) Reload(options ...playwright.PageReloadOptions) (playwright.Response, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Reload", varargs...)
-	ret0, _ := ret[0].(playwright_go.Response)
+	ret0, _ := ret[0].(playwright.Response)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -1619,7 +1619,7 @@ func (mr *MockPageMockRecorder) RemoveListeners(name any) *gomock.Call {
 }
 
 // RemoveLocatorHandler mocks base method.
-func (m *MockPage) RemoveLocatorHandler(locator playwright_go.Locator) error {
+func (m *MockPage) RemoveLocatorHandler(locator playwright.Locator) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RemoveLocatorHandler", locator)
 	ret0, _ := ret[0].(error)
@@ -1633,10 +1633,10 @@ func (mr *MockPageMockRecorder) RemoveLocatorHandler(locator any) *gomock.Call {
 }
 
 // Request mocks base method.
-func (m *MockPage) Request() playwright_go.APIRequestContext {
+func (m *MockPage) Request() playwright.APIRequestContext {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Request")
-	ret0, _ := ret[0].(playwright_go.APIRequestContext)
+	ret0, _ := ret[0].(playwright.APIRequestContext)
 	return ret0
 }
 
@@ -1661,7 +1661,7 @@ func (mr *MockPageMockRecorder) RequestGC() *gomock.Call {
 }
 
 // Route mocks base method.
-func (m *MockPage) Route(url any, handler func(playwright_go.Route), times ...int) error {
+func (m *MockPage) Route(url any, handler func(playwright.Route), times ...int) error {
 	m.ctrl.T.Helper()
 	varargs := []any{url, handler}
 	for _, a := range times {
@@ -1680,7 +1680,7 @@ func (mr *MockPageMockRecorder) Route(url, handler any, times ...any) *gomock.Ca
 }
 
 // RouteFromHAR mocks base method.
-func (m *MockPage) RouteFromHAR(har string, options ...playwright_go.PageRouteFromHAROptions) error {
+func (m *MockPage) RouteFromHAR(har string, options ...playwright.PageRouteFromHAROptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{har}
 	for _, a := range options {
@@ -1699,7 +1699,7 @@ func (mr *MockPageMockRecorder) RouteFromHAR(har any, options ...any) *gomock.Ca
 }
 
 // RouteWebSocket mocks base method.
-func (m *MockPage) RouteWebSocket(url any, handler func(playwright_go.WebSocketRoute)) error {
+func (m *MockPage) RouteWebSocket(url any, handler func(playwright.WebSocketRoute)) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RouteWebSocket", url, handler)
 	ret0, _ := ret[0].(error)
@@ -1713,7 +1713,7 @@ func (mr *MockPageMockRecorder) RouteWebSocket(url, handler any) *gomock.Call {
 }
 
 // Screenshot mocks base method.
-func (m *MockPage) Screenshot(options ...playwright_go.PageScreenshotOptions) ([]byte, error) {
+func (m *MockPage) Screenshot(options ...playwright.PageScreenshotOptions) ([]byte, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -1732,7 +1732,7 @@ func (mr *MockPageMockRecorder) Screenshot(options ...any) *gomock.Call {
 }
 
 // SelectOption mocks base method.
-func (m *MockPage) SelectOption(selector string, values playwright_go.SelectOptionValues, options ...playwright_go.PageSelectOptionOptions) ([]string, error) {
+func (m *MockPage) SelectOption(selector string, values playwright.SelectOptionValues, options ...playwright.PageSelectOptionOptions) ([]string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, values}
 	for _, a := range options {
@@ -1752,7 +1752,7 @@ func (mr *MockPageMockRecorder) SelectOption(selector, values any, options ...an
 }
 
 // SetChecked mocks base method.
-func (m *MockPage) SetChecked(selector string, checked bool, options ...playwright_go.PageSetCheckedOptions) error {
+func (m *MockPage) SetChecked(selector string, checked bool, options ...playwright.PageSetCheckedOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, checked}
 	for _, a := range options {
@@ -1771,7 +1771,7 @@ func (mr *MockPageMockRecorder) SetChecked(selector, checked any, options ...any
 }
 
 // SetContent mocks base method.
-func (m *MockPage) SetContent(html string, options ...playwright_go.PageSetContentOptions) error {
+func (m *MockPage) SetContent(html string, options ...playwright.PageSetContentOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{html}
 	for _, a := range options {
@@ -1828,7 +1828,7 @@ func (mr *MockPageMockRecorder) SetExtraHTTPHeaders(headers any) *gomock.Call {
 }
 
 // SetInputFiles mocks base method.
-func (m *MockPage) SetInputFiles(selector string, files any, options ...playwright_go.PageSetInputFilesOptions) error {
+func (m *MockPage) SetInputFiles(selector string, files any, options ...playwright.PageSetInputFilesOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, files}
 	for _, a := range options {
@@ -1861,7 +1861,7 @@ func (mr *MockPageMockRecorder) SetViewportSize(width, height any) *gomock.Call 
 }
 
 // Tap mocks base method.
-func (m *MockPage) Tap(selector string, options ...playwright_go.PageTapOptions) error {
+func (m *MockPage) Tap(selector string, options ...playwright.PageTapOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1880,7 +1880,7 @@ func (mr *MockPageMockRecorder) Tap(selector any, options ...any) *gomock.Call {
 }
 
 // TextContent mocks base method.
-func (m *MockPage) TextContent(selector string, options ...playwright_go.PageTextContentOptions) (string, error) {
+func (m *MockPage) TextContent(selector string, options ...playwright.PageTextContentOptions) (string, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1915,10 +1915,10 @@ func (mr *MockPageMockRecorder) Title() *gomock.Call {
 }
 
 // Touchscreen mocks base method.
-func (m *MockPage) Touchscreen() playwright_go.Touchscreen {
+func (m *MockPage) Touchscreen() playwright.Touchscreen {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Touchscreen")
-	ret0, _ := ret[0].(playwright_go.Touchscreen)
+	ret0, _ := ret[0].(playwright.Touchscreen)
 	return ret0
 }
 
@@ -1929,7 +1929,7 @@ func (mr *MockPageMockRecorder) Touchscreen() *gomock.Call {
 }
 
 // Type mocks base method.
-func (m *MockPage) Type(selector, text string, options ...playwright_go.PageTypeOptions) error {
+func (m *MockPage) Type(selector, text string, options ...playwright.PageTypeOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector, text}
 	for _, a := range options {
@@ -1962,7 +1962,7 @@ func (mr *MockPageMockRecorder) URL() *gomock.Call {
 }
 
 // Uncheck mocks base method.
-func (m *MockPage) Uncheck(selector string, options ...playwright_go.PageUncheckOptions) error {
+func (m *MockPage) Uncheck(selector string, options ...playwright.PageUncheckOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
@@ -1981,7 +1981,7 @@ func (mr *MockPageMockRecorder) Uncheck(selector any, options ...any) *gomock.Ca
 }
 
 // Unroute mocks base method.
-func (m *MockPage) Unroute(url any, handler ...func(playwright_go.Route)) error {
+func (m *MockPage) Unroute(url any, handler ...func(playwright.Route)) error {
 	m.ctrl.T.Helper()
 	varargs := []any{url}
 	for _, a := range handler {
@@ -2000,7 +2000,7 @@ func (mr *MockPageMockRecorder) Unroute(url any, handler ...any) *gomock.Call {
 }
 
 // UnrouteAll mocks base method.
-func (m *MockPage) UnrouteAll(options ...playwright_go.PageUnrouteAllOptions) error {
+func (m *MockPage) UnrouteAll(options ...playwright.PageUnrouteAllOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -2018,10 +2018,10 @@ func (mr *MockPageMockRecorder) UnrouteAll(options ...any) *gomock.Call {
 }
 
 // Video mocks base method.
-func (m *MockPage) Video() playwright_go.Video {
+func (m *MockPage) Video() playwright.Video {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Video")
-	ret0, _ := ret[0].(playwright_go.Video)
+	ret0, _ := ret[0].(playwright.Video)
 	return ret0
 }
 
@@ -2032,10 +2032,10 @@ func (mr *MockPageMockRecorder) Video() *gomock.Call {
 }
 
 // ViewportSize mocks base method.
-func (m *MockPage) ViewportSize() *playwright_go.Size {
+func (m *MockPage) ViewportSize() *playwright.Size {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ViewportSize")
-	ret0, _ := ret[0].(*playwright_go.Size)
+	ret0, _ := ret[0].(*playwright.Size)
 	return ret0
 }
 
@@ -2046,7 +2046,7 @@ func (mr *MockPageMockRecorder) ViewportSize() *gomock.Call {
 }
 
 // WaitForEvent mocks base method.
-func (m *MockPage) WaitForEvent(event string, options ...playwright_go.PageWaitForEventOptions) (any, error) {
+func (m *MockPage) WaitForEvent(event string, options ...playwright.PageWaitForEventOptions) (any, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{event}
 	for _, a := range options {
@@ -2066,14 +2066,14 @@ func (mr *MockPageMockRecorder) WaitForEvent(event any, options ...any) *gomock.
 }
 
 // WaitForFunction mocks base method.
-func (m *MockPage) WaitForFunction(expression string, arg any, options ...playwright_go.PageWaitForFunctionOptions) (playwright_go.JSHandle, error) {
+func (m *MockPage) WaitForFunction(expression string, arg any, options ...playwright.PageWaitForFunctionOptions) (playwright.JSHandle, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{expression, arg}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "WaitForFunction", varargs...)
-	ret0, _ := ret[0].(playwright_go.JSHandle)
+	ret0, _ := ret[0].(playwright.JSHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -2086,7 +2086,7 @@ func (mr *MockPageMockRecorder) WaitForFunction(expression, arg any, options ...
 }
 
 // WaitForLoadState mocks base method.
-func (m *MockPage) WaitForLoadState(options ...playwright_go.PageWaitForLoadStateOptions) error {
+func (m *MockPage) WaitForLoadState(options ...playwright.PageWaitForLoadStateOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
 	for _, a := range options {
@@ -2104,14 +2104,14 @@ func (mr *MockPageMockRecorder) WaitForLoadState(options ...any) *gomock.Call {
 }
 
 // WaitForSelector mocks base method.
-func (m *MockPage) WaitForSelector(selector string, options ...playwright_go.PageWaitForSelectorOptions) (playwright_go.ElementHandle, error) {
+func (m *MockPage) WaitForSelector(selector string, options ...playwright.PageWaitForSelectorOptions) (playwright.ElementHandle, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{selector}
 	for _, a := range options {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "WaitForSelector", varargs...)
-	ret0, _ := ret[0].(playwright_go.ElementHandle)
+	ret0, _ := ret[0].(playwright.ElementHandle)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -2136,7 +2136,7 @@ func (mr *MockPageMockRecorder) WaitForTimeout(timeout any) *gomock.Call {
 }
 
 // WaitForURL mocks base method.
-func (m *MockPage) WaitForURL(url any, options ...playwright_go.PageWaitForURLOptions) error {
+func (m *MockPage) WaitForURL(url any, options ...playwright.PageWaitForURLOptions) error {
 	m.ctrl.T.Helper()
 	varargs := []any{url}
 	for _, a := range options {
@@ -2155,10 +2155,10 @@ func (mr *MockPageMockRecorder) WaitForURL(url any, options ...any) *gomock.Call
 }
 
 // Workers mocks base method.
-func (m *MockPage) Workers() []playwright_go.Worker {
+func (m *MockPage) Workers() []playwright.Worker {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Workers")
-	ret0, _ := ret[0].([]playwright_go.Worker)
+	ret0, _ := ret[0].([]playwright.Worker)
 	return ret0
 }
 
