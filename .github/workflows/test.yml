@@ -30,13 +30,12 @@ jobs:
           go get go.uber.org/mock/mockgen
           go install go.uber.org/mock/mockgen
           echo "DEBUG: installed"
-          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks github.com/playwright-community/playwright-go Page
+          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks -imports playwright=github.com/playwright-community/playwright-go github.com/playwright-community/playwright-go Page
           echo "DEBUG: generated"
           git diff
           echo "DIFFED"
           mockgen --version
-          playwright -V
 
           echo "debuggign parser"
-          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks -debug_parser github.com/playwright-community/playwright-go Page
+          mockgen -destination=./mocks/mock_playwright_page.go -package=mocks -debug_parser -imports playwright=github.com/playwright-community/playwright-go github.com/playwright-community/playwright-go Page
           echo "debugged parser"
